@@ -158,7 +158,7 @@ function renderModalidadesHome() {
       <div class="jjc-modalidade-body">
         <h3>${mod.nome}</h3>
         <p>${mod.descricaoCurta}</p>
-        <a href="${mod.slug}.html" class="cc-btn cc-btn-primary">Saiba Mais</a>
+        <a href="html/${mod.slug}.html" class="cc-btn cc-btn-primary">Saiba Mais</a>
       </div>
     </article>
   `).join("");
