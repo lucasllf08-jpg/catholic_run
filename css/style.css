@@ -623,93 +623,35 @@ footer p{
 
 @media (max-width:600px){
 
-    body{
-        font-size:15px;
-    }
-
     .cc-hero{
-        min-height:92vh;
-        padding:100px 0 70px;
-    }
+    min-height:80vh;
+    padding:110px 0 50px;
+}
 
-    .cc-hero h1{
-        font-size:2.1rem;
-    }
+.cc-hero.jjc-hero-modalidade{
+    min-height:64vh;
+    padding:100px 0 40px;
+}
 
-    .cc-versiculo{
-        font-size:.95rem;
-    }
+.cc-tag{
+    font-size:.72rem;
+    padding:6px 16px;
+    margin-bottom:16px;
+}
 
-    .cc-section{
-        padding:56px 0;
-    }
+.cc-hero h1{
+    font-size:1.9rem;
+    margin-bottom:14px;
+}
 
-    .cc-wrap{
-        padding:0 18px;
-    }
+.cc-versiculo{
+    font-size:.88rem;
+    margin-bottom:18px;
+}
 
-    .cc-hero-actions{
-        flex-direction:column;
-        width:100%;
-    }
-
-    .cc-btn{
-        width:100%;
-        padding:14px 24px;
-    }
-
-    #contador{
-        grid-template-columns:repeat(4,1fr);
-        gap:10px;
-        max-width:100%;
-    }
-
-    .contador-item{
-        padding:16px 6px;
-    }
-
-    .contador-item h3{
-        font-size:1.6rem;
-    }
-
-    .contador-item span{
-        font-size:.62rem;
-    }
-
-    .cc-cards{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .cc-card{
-        padding:28px 24px;
-    }
-
-    .cc-schedule-list li{
-        flex-wrap:wrap;
-        padding:16px 18px;
-        gap:6px;
-    }
-
-    .cc-info-grid{
-        grid-template-columns:1fr;
-    }
-
-    .cc-placeholder{
-        height:200px;
-    }
-
-    details{
-        padding:16px 18px;
-    }
-
-    summary{
-        font-size:.95rem;
-    }
-
-    footer{
-        padding:50px 18px;
-    }
+.cc-hero > .cc-wrap > p:not(.cc-versiculo){
+    font-size:.92rem;
+}
 
 }
 
@@ -821,6 +763,8 @@ footer p{
     border:none;
     cursor:pointer;
     padding:6px;
+    position:relative;
+    z-index:1002;
 }
 
 .jjc-nav-toggle span{
@@ -1201,21 +1145,22 @@ footer p{
     }
 
     .jjc-nav-links{
-        position:fixed;
-        top:0;
-        right:0;
-        height:100vh;
-        width:min(78vw,320px);
-        background:var(--primary-dark);
-        flex-direction:column;
-        justify-content:center;
-        align-items:flex-start;
-        gap:28px;
-        padding:40px;
-        transform:translateX(100%);
-        transition:var(--transition);
-        box-shadow:var(--shadow-hover);
-    }
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:min(78vw,320px);
+    background:var(--primary-dark);
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    gap:28px;
+    padding:40px;
+    transform:translateX(100%);
+    transition:var(--transition);
+    box-shadow:var(--shadow-hover);
+    z-index:1001;
+}
 
     .jjc-nav-links.open{
         transform:translateX(0);

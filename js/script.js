@@ -48,6 +48,7 @@ function initNav() {
   onScroll();
 
   // Menu mobile (hambúrguer)
+  // Menu mobile (hambúrguer)
   if (toggle && links) {
     toggle.addEventListener("click", () => {
       links.classList.toggle("open");
@@ -60,6 +61,24 @@ function initNav() {
         links.classList.remove("open");
         toggle.classList.remove("open");
       });
+    });
+
+    // Fecha o menu ao tocar/clicar fora dele
+    document.addEventListener("click", (e) => {
+      const menuAberto = links.classList.contains("open");
+      const cliqueForaDoMenu = !links.contains(e.target) && !toggle.contains(e.target);
+      if (menuAberto && cliqueForaDoMenu) {
+        links.classList.remove("open");
+        toggle.classList.remove("open");
+      }
+    });
+
+    // Fecha o menu ao pressionar a tecla Esc
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && links.classList.contains("open")) {
+        links.classList.remove("open");
+        toggle.classList.remove("open");
+      }
     });
   }
 

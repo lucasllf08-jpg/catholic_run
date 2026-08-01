@@ -27,7 +27,7 @@ const JJC_DATA = {
     slogan: "Velocidade, técnica e espírito de equipe dentro de quadra.",
     descricaoCurta: "Times das comunidades se enfrentam em partidas rápidas e eletrizantes de futsal.",
     imagem: "https://placehold.co/1200x800/0A3A40/EAF9FA?text=Futsal+JJC",
-    imagemCard: "img/futsal.jpg",
+    imagemCard: "../img/futsal.jpg",
     linkInscricao: "https://forms.gle/PLACEHOLDER-INSCRICAO-FUTSAL",
 
     sobre: "O Futsal é uma das modalidades mais tradicionais dos Jogos da Juventude Católica (JJC), reunindo equipes formadas pelas comunidades da Paróquia Nossa Senhora Aparecida. Além da disputa esportiva, o torneio é um espaço de convivência, evangelização e fortalecimento dos laços entre os jovens e adultos participantes, vivendo o esporte como ferramenta de união e fé.",
@@ -108,7 +108,7 @@ const JJC_DATA = {
     slogan: "Levante, ataque e defenda com fé e determinação.",
     descricaoCurta: "Equipes masculinas e femininas disputam pontos com garra e comunhão.",
     imagem: "https://placehold.co/1200x800/0A3A40/EAF9FA?text=Vo%CC%82lei+JJC",
-    imagemCard: "img/volei.jpg",
+    imagemCard: "../img/volei.jpg",
     linkInscricao: "https://forms.gle/PLACEHOLDER-INSCRICAO-VOLEI",
 
     sobre: "O Vôlei nos Jogos da Juventude Católica (JJC) reúne equipes masculinas e femininas das comunidades da Paróquia Nossa Senhora Aparecida em partidas disputadas com técnica e espírito esportivo. A modalidade reforça o trabalho em equipe e a alegria da convivência entre os jovens em torno da fé.",
@@ -170,7 +170,7 @@ const JJC_DATA = {
     slogan: "Agilidade, mira e muita diversão entre as comunidades.",
     descricaoCurta: "Equipes mistas se enfrentam em partidas animadas de queimada.",
     imagem: "https://placehold.co/1200x800/0A3A40/EAF9FA?text=Queimada+JJC",
-    imagemCard: "img/queimada.jpg",
+    imagemCard: "../img/queimada.jpg",
     linkInscricao: "https://forms.gle/PLACEHOLDER-INSCRICAO-QUEIMADA",
 
     sobre: "A Queimada é uma das modalidades mais animadas dos Jogos da Juventude Católica (JJC), reunindo equipes mistas das comunidades da Paróquia Nossa Senhora Aparecida em partidas descontraídas, que unem agilidade, estratégia e muita diversão entre os participantes de todas as idades.",
