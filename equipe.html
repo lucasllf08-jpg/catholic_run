@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe · Jogos da Juventude Católica (JJC)</title>
+    <meta name="description" content="Página da equipe · Jogos da Juventude Católica (JJC) — Paróquia Nossa Senhora Aparecida.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="cc-root">
+
+        <!-- NAVEGAÇÃO -->
+        <nav class="jjc-nav" id="siteNav">
+            <div class="cc-wrap jjc-nav-inner">
+                <a href="index.html" class="jjc-logo">JJC <span>Jogos da Juventude Católica</span></a>
+                <button class="jjc-nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="jjc-nav-links" id="navLinks">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="futsal.html">Futsal</a></li>
+                    <li><a href="volei.html">Vôlei</a></li>
+                    <li><a href="queimada.html">Queimada</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="jjc-page-offset" data-pagina-equipe>
+
+            <!-- ESTADO: EQUIPE NÃO ENCONTRADA -->
+            <section class="cc-section" data-equipe-nao-encontrada hidden>
+                <div class="cc-wrap">
+                    <p class="cc-eyebrow">Ops</p>
+                    <h2>Equipe não encontrada</h2>
+                    <p>Não localizamos essa equipe. Verifique o link ou volte para a página da modalidade.</p>
+                    <a href="index.html" class="cc-btn cc-btn-primary">Voltar para o início</a>
+                </div>
+            </section>
+
+            <!-- CONTEÚDO DA EQUIPE -->
+            <div data-equipe-conteudo hidden>
+
+                <!-- CABEÇALHO DA EQUIPE -->
+                <section class="cc-section">
+                    <div class="cc-wrap">
+
+                        <a href="futsal.html" data-equipe-voltar class="jjc-back-link">← Voltar para a modalidade</a>
+
+                        <p class="cc-eyebrow" data-equipe-modalidade>Modalidade</p>
+
+                        <div class="jjc-equipe-header">
+                            <img src="" alt="Escudo da equipe" data-equipe-escudo class="jjc-equipe-escudo">
+                            <div>
+                                <h1 data-equipe-nome>Nome da equipe</h1>
+                                <p style="margin:0;color:var(--secondary-light);font-weight:600;" data-equipe-comunidade>Comunidade</p>
+                            </div>
+                        </div>
+
+                        <div class="jjc-equipe-foto-wrap">
+                            <img src="" alt="Foto da equipe" data-equipe-foto>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- FICHA DA EQUIPE -->
+                <section class="cc-section">
+                    <div class="cc-wrap">
+                        <p class="cc-eyebrow">Comissão técnica</p>
+                        <h2>Ficha da equipe</h2>
+
+                        <div class="jjc-equipe-meta">
+                            <div>
+                                <h4>Capitão</h4>
+                                <p data-equipe-capitao>—</p>
+                            </div>
+                            <div>
+                                <h4>Vice-capitão</h4>
+                                <p data-equipe-vice>—</p>
+                            </div>
+                            <div>
+                                <h4>Técnico</h4>
+                                <p data-equipe-tecnico>—</p>
+                            </div>
+                        </div>
+
+                        <p class="cc-note" data-equipe-info>Informações adicionais.</p>
+                    </div>
+                </section>
+
+                <!-- ELENCO -->
+                <section class="cc-section">
+                    <div class="cc-wrap">
+                        <p class="cc-eyebrow">Elenco</p>
+                        <h2>Atletas</h2>
+
+                        <table class="jjc-roster-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Número</th>
+                                    <th>Posição / Categoria</th>
+                                </tr>
+                            </thead>
+                            <tbody data-equipe-atletas></tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer class="cc-section">
+            <div class="cc-wrap">
+                <p>© 2026 - Jogos da Juventude Católica (JJC)</p>
+                <p>Paróquia Nossa Senhora Aparecida — Espigão do Oeste, RO</p>
+                <p>"Evangelizar pelo esporte, unir pela fé."</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

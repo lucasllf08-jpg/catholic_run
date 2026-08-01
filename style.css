@@ -1,0 +1,1252 @@
+/* ============================================
+   1ª Corrida Católica — style.css (tema escuro)
+   ============================================ */
+
+:root{
+
+    --primary:#0E8C93;        /* teal principal */
+    --primary-light:#3FB6BE;
+    --primary-dark:#053A3F;
+
+    --secondary:#D4AF37;      /* mantém o dourado como contraste */
+    --secondary-light:#F0D77A;
+
+    --bg:#062A2E;              /* fundo — teal bem escuro */
+    --bg-alt:#0A3A40;
+    --surface:#0F4D53;
+    --surface-hover:#125D64;
+
+    --text:#EAF9FA;
+    --text-muted:#A9D9DC;
+    --border:#1D6167;
+
+    --radius:18px;
+    --radius-sm:12px;
+
+    --shadow:0 8px 25px rgba(0,0,0,.35);
+    --shadow-hover:0 18px 45px rgba(0,0,0,.5);
+
+    --transition:.35s ease;
+
+    --max-width:1100px;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Poppins",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    overflow-x:hidden;
+    font-size:16px;
+}
+
+h1,h2,h3,h4{
+    margin:0 0 .5em;
+    font-weight:600;
+    line-height:1.25;
+    color:var(--text);
+}
+
+p{
+    margin:0 0 1em;
+    color:var(--text-muted);
+}
+
+a{
+    color:var(--secondary-light);
+    text-decoration:none;
+    transition:var(--transition);
+}
+
+a:hover{
+    color:var(--secondary);
+}
+
+ul,ol{
+    margin:0;
+    padding-left:1.2em;
+}
+
+strong{
+    color:var(--text);
+}
+
+.cc-wrap{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:0 24px;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.cc-hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:120px 0 80px;
+
+   background:
+        linear-gradient(160deg, rgba(6,42,46,.55), rgba(10,58,64,.85)),
+        url(img/hero.jpg) center/cover;
+}
+
+.cc-hero::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:140px;
+    background:linear-gradient(to top,var(--bg),transparent);
+}
+
+.cc-hero .cc-wrap{
+    position:relative;
+    z-index:2;
+}
+
+.cc-tag{
+    display:inline-block;
+    padding:8px 20px;
+    background:rgba(212,175,55,.14);
+    border:1px solid rgba(212,175,55,.4);
+    border-radius:50px;
+    margin-bottom:22px;
+    backdrop-filter:blur(10px);
+    font-size:.85rem;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    font-weight:500;
+    color:var(--secondary-light);
+}
+
+.cc-hero h1{
+    font-size:clamp(2.2rem,6vw,4.5rem);
+    line-height:1.12;
+    margin-bottom:22px;
+    color:white;
+    text-shadow:0 4px 18px rgba(0,0,0,.5);
+}
+
+.cc-versiculo{
+    font-style:italic;
+    font-size:clamp(1rem,2vw,1.2rem);
+    max-width:520px;
+    margin:0 auto 26px;
+    color:var(--secondary-light);
+    opacity:.95;
+}
+
+.cc-hero > .cc-wrap > p:not(.cc-versiculo){
+    font-size:1.05rem;
+    margin-bottom:6px;
+    color:#DCE7F7;
+}
+
+.cc-hero-actions{
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.cc-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 36px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:.95rem;
+    transition:var(--transition);
+    cursor:pointer;
+    border:none;
+}
+
+.cc-btn-primary{
+    background:var(--secondary);
+    color:#12233F;
+}
+
+.cc-btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(212,175,55,.35);
+    background:var(--secondary-light);
+}
+
+.cc-btn-ghost{
+    color:white;
+    border:2px solid rgba(255,255,255,.6);
+    background:rgba(255,255,255,.05);
+}
+
+.cc-btn-ghost:hover{
+    background:white;
+    color:var(--primary-dark);
+    transform:translateY(-4px);
+}
+
+/* ============================================
+   SECTIONS — GENERAL
+   ============================================ */
+
+.cc-section{
+    padding:90px 0;
+    animation:fadeUp .8s ease;
+}
+
+.cc-section:nth-child(odd){
+    background:var(--bg);
+}
+
+.cc-section:nth-child(even){
+    background:var(--bg-alt);
+}
+
+.cc-eyebrow{
+    display:inline-block;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:.8rem;
+    font-weight:700;
+    color:var(--secondary);
+    margin-bottom:10px;
+}
+
+.cc-section h2{
+    font-size:clamp(1.7rem,3.5vw,2.3rem);
+    margin-bottom:16px;
+    color:white;
+    position:relative;
+}
+
+.cc-section > .cc-wrap > p:first-of-type,
+.cc-section > .cc-wrap > p.cc-lead{
+    color:var(--text-muted);
+    max-width:640px;
+    font-size:1.02rem;
+}
+
+/* ============================================
+   COUNTDOWN
+   ============================================ */
+
+#contador{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    max-width:640px;
+    margin:36px auto 0;
+}
+
+.contador-item{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px 10px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.contador-item:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-hover);
+    border-color:var(--secondary);
+}
+
+.contador-item h3{
+    font-size:clamp(1.8rem,5vw,2.8rem);
+    color:var(--secondary-light);
+    margin-bottom:2px;
+    font-weight:700;
+}
+
+.contador-item span{
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--text-muted);
+    font-size:.75rem;
+}
+
+/* ============================================
+   CARDS (modalidades, retirada de kit, percurso)
+   ============================================ */
+
+.cc-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+    margin-top:34px;
+}
+
+.cc-card{
+    background:var(--surface);
+    padding:36px 30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    transition:var(--transition);
+}
+
+.cc-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-hover);
+    border-color:var(--secondary);
+    background:var(--surface-hover);
+}
+
+.cc-card h3{
+    color:var(--text-muted);
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    font-weight:600;
+    margin-bottom:4px;
+}
+
+.cc-card > h2{
+    color:var(--secondary-light);
+    font-size:2.4rem;
+    margin-bottom:12px;
+}
+
+.cc-card p{
+    color:var(--text-muted);
+    font-size:.95rem;
+    margin-bottom:0;
+}
+
+.cc-card-time{
+    display:inline-block;
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:.5px;
+    color:var(--primary-light);
+    background:rgba(30,111,217,.15);
+    padding:5px 14px;
+    border-radius:50px;
+    margin-bottom:16px;
+}
+
+.cc-cards-kit .cc-card{
+    text-align:center;
+}
+
+/* ============================================
+   PROGRAMAÇÃO — timeline
+   ============================================ */
+
+.cc-schedule-list{
+    list-style:none;
+    padding:0;
+    margin:34px 0 0;
+}
+
+.cc-schedule-list li{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:var(--surface);
+    padding:18px 24px;
+    margin-bottom:12px;
+    border-radius:15px;
+    border-left:6px solid var(--secondary);
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+    color:var(--text);
+}
+
+.cc-schedule-list li:hover{
+    transform:translateX(8px);
+    box-shadow:var(--shadow-hover);
+    background:var(--surface-hover);
+}
+
+.cc-time{
+    font-weight:700;
+    color:var(--secondary-light);
+    min-width:66px;
+    font-size:.95rem;
+}
+
+.cc-note{
+    background:rgba(212,175,55,.1);
+    border-left:4px solid var(--secondary);
+    padding:16px 20px;
+    border-radius:var(--radius-sm);
+    font-size:.92rem;
+    margin-top:26px;
+    color:var(--text-muted);
+}
+
+.cc-note strong{
+    color:var(--secondary-light);
+}
+
+/* ============================================
+   KIT ITEMS
+   ============================================ */
+
+.cc-kit-items{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    list-style:none;
+    padding:0;
+    margin:24px 0;
+}
+
+.cc-kit-items li{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:10px 20px;
+    border-radius:50px;
+    box-shadow:var(--shadow);
+    font-size:.9rem;
+    font-weight:500;
+    color:var(--text);
+}
+
+/* ============================================
+   INFO GRID (largada)
+   ============================================ */
+
+.cc-info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:26px;
+    margin:34px 0;
+}
+
+.cc-info-grid > div{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:26px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.cc-info-grid h4{
+    color:var(--secondary-light);
+    margin-bottom:8px;
+    font-size:1rem;
+}
+
+.cc-info-grid p{
+    color:var(--text-muted);
+    font-size:.92rem;
+    margin-bottom:0;
+}
+
+/* ============================================
+   PLACEHOLDERS (mapas, altimetria etc.)
+   ============================================ */
+
+.cc-placeholder{
+    height:260px;
+    border:3px dashed var(--border);
+    border-radius:var(--radius);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--text-muted);
+    background:rgba(255,255,255,.02);
+    margin-top:20px;
+    font-size:.9rem;
+    text-align:center;
+    padding:20px;
+}
+
+.cc-placeholder-map{
+    height:180px;
+    margin-top:0;
+    margin-bottom:18px;
+}
+
+/* ============================================
+   PATROCINADORES
+   ============================================ */
+
+.cc-patrocinadores{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:30px;
+    margin-top:30px;
+}
+
+.cc-logo{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-sm);
+    box-shadow:var(--shadow);
+    padding:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:var(--transition);
+    cursor:pointer;
+}
+
+.cc-logo:hover{
+    transform:scale(1.05);
+    box-shadow:var(--shadow-hover);
+    border-color:var(--secondary);
+}
+
+/* ============================================
+   FAQ
+   ============================================ */
+
+details{
+    border-radius:15px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+    margin-bottom:16px;
+    padding:20px 24px;
+    transition:var(--transition);
+}
+
+details[open]{
+    box-shadow:var(--shadow-hover);
+    border-color:var(--secondary);
+}
+
+details:hover{
+    box-shadow:var(--shadow-hover);
+}
+
+summary{
+    font-size:1.02rem;
+    font-weight:600;
+    color:var(--text);
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+summary::after{
+    content:"+";
+    font-size:1.4rem;
+    color:var(--secondary);
+    transition:var(--transition);
+    margin-left:12px;
+}
+
+details[open] summary::after{
+    transform:rotate(45deg);
+}
+
+details p{
+    margin-top:14px;
+    color:var(--text-muted);
+    font-size:.95rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer{
+    background:var(--primary-dark);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+    border-top:1px solid var(--border);
+}
+
+footer p{
+    opacity:.8;
+    margin-bottom:6px;
+    font-size:.9rem;
+    color:#CFE0F5;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE — TABLET
+   ============================================ */
+
+@media (max-width:900px){
+
+    .cc-wrap{
+        padding:0 20px;
+    }
+
+    .cc-section{
+        padding:70px 0;
+    }
+
+    #contador{
+        max-width:460px;
+    }
+
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+
+@media (max-width:600px){
+
+    body{
+        font-size:15px;
+    }
+
+    .cc-hero{
+        min-height:92vh;
+        padding:100px 0 70px;
+    }
+
+    .cc-hero h1{
+        font-size:2.1rem;
+    }
+
+    .cc-versiculo{
+        font-size:.95rem;
+    }
+
+    .cc-section{
+        padding:56px 0;
+    }
+
+    .cc-wrap{
+        padding:0 18px;
+    }
+
+    .cc-hero-actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .cc-btn{
+        width:100%;
+        padding:14px 24px;
+    }
+
+    #contador{
+        grid-template-columns:repeat(4,1fr);
+        gap:10px;
+        max-width:100%;
+    }
+
+    .contador-item{
+        padding:16px 6px;
+    }
+
+    .contador-item h3{
+        font-size:1.6rem;
+    }
+
+    .contador-item span{
+        font-size:.62rem;
+    }
+
+    .cc-cards{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .cc-card{
+        padding:28px 24px;
+    }
+
+    .cc-schedule-list li{
+        flex-wrap:wrap;
+        padding:16px 18px;
+        gap:6px;
+    }
+
+    .cc-info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cc-placeholder{
+        height:200px;
+    }
+
+    details{
+        padding:16px 18px;
+    }
+
+    summary{
+        font-size:.95rem;
+    }
+
+    footer{
+        padding:50px 18px;
+    }
+
+}
+
+/* ============================================
+   RESPONSIVE — SMALL PHONES
+   ============================================ */
+
+@media (max-width:380px){
+
+    .cc-hero h1{
+        font-size:1.8rem;
+    }
+
+    #contador{
+        gap:8px;
+    }
+
+    .contador-item h3{
+        font-size:1.35rem;
+    }
+
+}
+
+/* ==================================================================
+   PORTAL JJC — COMPONENTES ADICIONAIS
+   ==================================================================
+   A partir daqui: navegação, home do portal, páginas de modalidade,
+   equipes, galeria e demais componentes novos do portal JJC.
+   Reutilizam sempre as variáveis de cor/tipografia definidas no
+   topo deste arquivo para manter 100% de identidade visual.
+   ================================================================== */
+
+/* ---------------- NAVEGAÇÃO ---------------- */
+
+.jjc-nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 0;
+    background:transparent;
+    transition:var(--transition);
+}
+
+.jjc-nav.scrolled{
+    padding:12px 0;
+    background:rgba(6,42,46,.92);
+    backdrop-filter:blur(10px);
+    box-shadow:var(--shadow);
+    border-bottom:1px solid var(--border);
+}
+
+.jjc-nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.jjc-logo{
+    display:flex;
+    flex-direction:column;
+    line-height:1.15;
+    font-weight:700;
+    font-size:1.25rem;
+    color:white;
+}
+
+.jjc-logo span{
+    font-size:.6rem;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:.6px;
+    color:var(--text-muted);
+}
+
+.jjc-logo:hover{
+    color:var(--secondary-light);
+}
+
+.jjc-nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.jjc-nav-links a{
+    color:white;
+    font-weight:500;
+    font-size:.92rem;
+}
+
+.jjc-nav-links a.active,
+.jjc-nav-links a:hover{
+    color:var(--secondary-light);
+}
+
+.jjc-nav-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:34px;
+    height:34px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:6px;
+}
+
+.jjc-nav-toggle span{
+    display:block;
+    width:100%;
+    height:2px;
+    background:white;
+    border-radius:2px;
+    transition:var(--transition);
+}
+
+.jjc-nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.jjc-nav-toggle.open span:nth-child(2){ opacity:0; }
+.jjc-nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+/* Compensa a altura do menu fixo no topo de cada página */
+.jjc-page-offset{
+    padding-top:88px;
+}
+
+/* ---------------- HERO PADRÃO (páginas internas) ---------------- */
+
+.cc-hero.jjc-hero-modalidade{
+    min-height:100vh;
+}
+
+.cc-hero-img{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    z-index:0;
+}
+
+.cc-hero-img::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(160deg, rgba(6,42,46,.6), rgba(10,58,64,.9));
+}
+
+/* ---------------- CARDS DE MODALIDADES (HOME) ---------------- */
+
+.jjc-modalidades-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:28px;
+    margin-top:36px;
+}
+
+.jjc-modalidade-card{
+    display:flex;
+    flex-direction:column;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.jjc-modalidade-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-hover);
+    border-color:var(--secondary);
+}
+
+.jjc-modalidade-img{
+    height:190px;
+    background-size:cover;
+    background-position:center;
+    background-color:var(--bg-alt);
+}
+
+.jjc-modalidade-body{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    flex:1;
+    padding:26px;
+}
+
+.jjc-modalidade-body h3{
+    color:white;
+    font-size:1.3rem;
+    margin:0;
+}
+
+.jjc-modalidade-body p{
+    flex:1;
+    margin:0;
+    color:var(--text-muted);
+    font-size:.94rem;
+}
+
+.jjc-modalidade-body .cc-btn{
+    align-self:flex-start;
+    padding:11px 26px;
+    font-size:.85rem;
+}
+
+/* ---------------- INFO GERAIS (grid de ícones) ---------------- */
+
+.jjc-info-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:22px;
+    margin-top:34px;
+}
+
+.jjc-info-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.jjc-info-card:hover{
+    border-color:var(--secondary);
+    transform:translateY(-4px);
+}
+
+.jjc-info-card .cc-eyebrow{
+    margin-bottom:8px;
+}
+
+.jjc-info-card p{
+    margin:0;
+    color:var(--text);
+    font-weight:500;
+}
+
+/* ---------------- CATEGORIAS ---------------- */
+
+.jjc-categorias-lista{
+    list-style:none;
+    padding:0;
+    margin:34px 0 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.jjc-categorias-lista li{
+    background:var(--surface);
+    border:1px solid var(--border);
+    padding:14px 24px;
+    border-radius:50px;
+    box-shadow:var(--shadow);
+    font-weight:600;
+    color:var(--text);
+    transition:var(--transition);
+}
+
+.jjc-categorias-lista li:hover{
+    border-color:var(--secondary);
+    background:var(--surface-hover);
+    transform:translateY(-3px);
+}
+
+/* ---------------- EQUIPES PARTICIPANTES ---------------- */
+
+.jjc-teams-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+    margin-top:34px;
+}
+
+.jjc-team-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:28px;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.jjc-team-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-hover);
+    border-color:var(--secondary);
+}
+
+.jjc-team-card h3{
+    margin:0;
+    color:white;
+    font-size:1.15rem;
+}
+
+.jjc-team-comunidade{
+    margin:0;
+    color:var(--secondary-light);
+    font-size:.85rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.4px;
+}
+
+.jjc-team-meta{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    font-size:.9rem;
+    color:var(--text-muted);
+}
+
+.jjc-team-meta strong{
+    color:var(--text);
+}
+
+.jjc-team-card .cc-btn{
+    align-self:flex-start;
+    padding:10px 24px;
+    font-size:.82rem;
+    margin-top:4px;
+}
+
+/* ---------------- PÁGINA DA EQUIPE ---------------- */
+
+.jjc-equipe-header{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:40px;
+    align-items:center;
+    margin-top:20px;
+}
+
+.jjc-equipe-escudo{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--secondary);
+    box-shadow:var(--shadow);
+    background:var(--surface);
+}
+
+.jjc-equipe-foto-wrap{
+    margin-top:34px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+.jjc-equipe-foto-wrap img{
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:420px;
+    object-fit:cover;
+}
+
+.jjc-equipe-meta{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin:30px 0;
+}
+
+.jjc-equipe-meta div{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-sm);
+    padding:18px 20px;
+}
+
+.jjc-equipe-meta h4{
+    margin:0 0 4px;
+    color:var(--secondary-light);
+    font-size:.8rem;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.jjc-equipe-meta p{
+    margin:0;
+    color:var(--text);
+    font-weight:500;
+}
+
+.jjc-roster-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:var(--surface);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.jjc-roster-table thead{
+    background:var(--primary-dark);
+}
+
+.jjc-roster-table th{
+    text-align:left;
+    padding:14px 20px;
+    font-size:.78rem;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    color:var(--secondary-light);
+}
+
+.jjc-roster-table td{
+    padding:14px 20px;
+    border-top:1px solid var(--border);
+    color:var(--text-muted);
+    font-size:.92rem;
+}
+
+.jjc-roster-table tr:hover td{
+    background:var(--surface-hover);
+    color:var(--text);
+}
+
+.jjc-back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-bottom:24px;
+    font-weight:600;
+    font-size:.9rem;
+}
+
+/* ---------------- GALERIA ---------------- */
+
+.jjc-galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
+    margin-top:34px;
+}
+
+.jjc-galeria-grid .cc-placeholder{
+    height:160px;
+    margin:0;
+}
+
+/* ---------------- PREMIAÇÃO EXTRA ---------------- */
+
+.jjc-premiacao-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+    margin-top:30px;
+}
+
+.jjc-premiacao-grid > div{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px;
+    box-shadow:var(--shadow);
+}
+
+.jjc-premiacao-grid h3{
+    color:var(--secondary-light);
+    font-size:1rem;
+    margin-bottom:10px;
+}
+
+/* ---------------- RESPONSIVO — PORTAL JJC ---------------- */
+
+@media (max-width:900px){
+
+    .jjc-nav-toggle{
+        display:flex;
+    }
+
+    .jjc-nav-links{
+        position:fixed;
+        top:0;
+        right:0;
+        height:100vh;
+        width:min(78vw,320px);
+        background:var(--primary-dark);
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+        gap:28px;
+        padding:40px;
+        transform:translateX(100%);
+        transition:var(--transition);
+        box-shadow:var(--shadow-hover);
+    }
+
+    .jjc-nav-links.open{
+        transform:translateX(0);
+    }
+
+    .jjc-nav-links a{
+        font-size:1.1rem;
+    }
+
+    .jjc-equipe-header{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:20px;
+    }
+
+    .jjc-equipe-escudo{
+        margin:0 auto;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .jjc-page-offset{
+        padding-top:76px;
+    }
+
+    .jjc-roster-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}

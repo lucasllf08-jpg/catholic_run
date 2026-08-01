@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos da Juventude Católica (JJC) · Paróquia Nossa Senhora Aparecida</title>
+    <meta name="description"
+        content="Jogos da Juventude Católica (JJC) — evento esportivo e comunitário da Paróquia Nossa Senhora Aparecida em Espigão do Oeste, RO. Futsal, Vôlei, Corrida de Rua e Queimada.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="cc-root">
+
+        <!-- NAVEGAÇÃO -->
+        <nav class="jjc-nav" id="siteNav">
+            <div class="cc-wrap jjc-nav-inner">
+                <a href="index.html" class="jjc-logo">JJC <span>Jogos da Juventude Católica</span></a>
+                <button class="jjc-nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="jjc-nav-links" id="navLinks">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="futsal.html">Futsal</a></li>
+                    <li><a href="volei.html">Vôlei</a></li>
+                    <li><a href="queimada.html">Queimada</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <header class="cc-hero">
+            <div class="cc-hero-img"
+               style="background-image:url('img/logo.jpeg')"></div>
+            <div class="cc-wrap">
+
+                <p class="cc-tag">Paróquia Nossa Senhora Aparecida · Espigão do Oeste, RO</p>
+
+                <h1>Jogos da Juventude Católica</h1>
+
+                <p class="cc-versiculo">
+                    Evangelizar pelo esporte, unir pela fé.
+                </p>
+
+                <p>
+                    Futsal · Vôlei · Corrida de Rua · Queimada
+                </p>
+
+                <div class="cc-hero-actions">
+                    <a href="#modalidades" class="cc-btn cc-btn-primary">Ver modalidades</a>
+                    <a href="#sobre" class="cc-btn cc-btn-ghost">Sobre o JJC</a>
+                </div>
+
+            </div>
+        </header>
+        
+
+        <main>
+
+            <!-- SOBRE -->
+            <section id="sobre" class="cc-section">
+                <div class="cc-wrap">
+
+                    <p class="cc-eyebrow">Sobre o evento</p>
+                    <h2>Esporte, fé e comunidade juntos</h2>
+
+                    <p>
+                        Os <strong>Jogos da Juventude Católica (JJC)</strong> são um evento esportivo e comunitário
+                        promovido pela <strong>Paróquia Nossa Senhora Aparecida</strong>, em Espigão do Oeste - RO.
+                        Mais do que competições, o JJC é um espaço de evangelização por meio do esporte, que busca
+                        fortalecer a união entre as comunidades paroquiais e incentivar a participação ativa da
+                        juventude em um ambiente de fé, superação e convivência fraterna.
+                    </p>
+
+                    <p>
+                        Ao longo do evento, jovens e adultos de diferentes comunidades se reúnem em quatro
+                        modalidades esportivas, vivendo momentos de oração, integração e alegria — reafirmando o
+                        esporte como instrumento de evangelização e construção de vínculos entre os fiéis.
+                    </p>
+
+                </div>
+            </section>
+            <section class="cc-section">
+                <div class="cc-wrap">
+                    <p class="cc-eyebrow">Falta pouco</p>
+                    <h2>Contagem Regressiva</h2>
+
+                    <div id="contador" data-contador data-alvo="2026-11-22T06:00:00-04:00">
+                        <div class="contador-item">
+                            <h3 data-cd-dias>00</h3>
+                            <span>dias</span>
+                        </div>
+                        <div class="contador-item">
+                            <h3 data-cd-horas>00</h3>
+                            <span>horas</span>
+                        </div>
+                        <div class="contador-item">
+                            <h3 data-cd-min>00</h3>
+                            <span>min</span>
+                        </div>
+                        <div class="contador-item">
+                            <h3 data-cd-seg>00</h3>
+                            <span>seg</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODALIDADES -->
+            <section id="modalidades" class="cc-section">
+                <div class="cc-wrap">
+
+                    <p class="cc-eyebrow">Modalidades</p>
+                    <h2>Escolha sua modalidade</h2>
+                    <p>Conheça as competições dos Jogos da Juventude Católica e saiba como participar.</p>
+
+                    <!-- Preenchido dinamicamente por script.js a partir de data.js -->
+                    <div class="jjc-modalidades-grid" data-modalidades></div>
+
+                </div>
+            </section>
+
+            <!-- COMO PARTICIPAR -->
+            <section class="cc-section">
+                <div class="cc-wrap">
+
+                    <p class="cc-eyebrow">Participação</p>
+                    <h2>Como participar do JJC</h2>
+                    <p>Cada modalidade possui inscrições, categorias e regulamento próprios.</p>
+
+                    <div class="cc-info-grid">
+                        <div>
+                            <h4>1. Escolha a modalidade</h4>
+                            <p>Acesse a página da modalidade desejada e conheça categorias, datas e local.</p>
+                        </div>
+                        <div>
+                            <h4>2. Inscreva-se</h4>
+                            <p>Use o botão "Inscreva-se" na página da modalidade para preencher o formulário
+                                oficial.</p>
+                        </div>
+                        <div>
+                            <h4>3. Participe</h4>
+                            <p>Compareça no dia e horário divulgados, vivendo esse momento de fé e esporte com sua
+                                comunidade.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- PATROCINADORES -->
+            <section class="cc-section">
+                <div class="cc-wrap">
+                    <h2>Patrocinadores</h2>
+                    <div class="cc-placeholder">
+                        Espaço reservado para logos dos patrocinadores do JJC.
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTATO -->
+            <section class="cc-section">
+                <div class="cc-wrap">
+
+                    <h2>Ainda com dúvidas?</h2>
+                    <p>Fala com a gente direto no Instagram — respondemos por lá mais rápido que em qualquer outro
+                        canal.</p>
+
+                    <p>
+                        <strong>Paróquia Nossa Senhora Aparecida</strong><br>
+                        Espigão do Oeste - Rondônia
+                    </p>
+
+                    <p>
+                        <a href="https://instagram.com/jjc.espigao" target="_blank" rel="noopener">@jjc.espigao</a><br>
+                        E-mail: contato@jjcespigao.com
+                    </p>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer class="cc-section">
+            <div class="cc-wrap">
+                <p>© 2026 - Jogos da Juventude Católica (JJC)</p>
+                <p>Paróquia Nossa Senhora Aparecida — Espigão do Oeste, RO</p>
+                <p>"Evangelizar pelo esporte, unir pela fé."</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
