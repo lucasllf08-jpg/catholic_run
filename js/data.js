@@ -36,7 +36,7 @@ const JJC_DATA = {
       data: "A definir",
       horario: "A definir",
       local: "Ginásio Poliesportivo Municipal (endereço a divulgar)",
-      publico: "Jovens e adultos das comunidades da Paróquia Nossa Senhora Aparecida"
+
     },
 
     categorias: [
@@ -117,7 +117,6 @@ const JJC_DATA = {
       data: "A definir",
       horario: "A definir",
       local: "Quadra Coberta da Paróquia (endereço a divulgar)",
-      publico: "Jovens e adultos das comunidades da Paróquia Nossa Senhora Aparecida"
     },
 
     categorias: [
@@ -179,7 +178,6 @@ const JJC_DATA = {
       data: "A definir",
       horario: "A definir",
       local: "Quadra Comunitária (endereço a divulgar)",
-      publico: "Jovens e adultos das comunidades da Paróquia Nossa Senhora Aparecida"
     },
 
     categorias: [
