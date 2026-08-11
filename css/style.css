@@ -752,6 +752,20 @@ footer p{
     color:var(--secondary-light);
 }
 
+/* Botão de destaque "Inscreva-se" dentro do menu */
+.jjc-nav-links a.jjc-nav-cta{
+    background:var(--secondary);
+    color:var(--primary-dark);
+    padding:9px 20px;
+    border-radius:50px;
+    font-weight:700;
+}
+
+.jjc-nav-links a.jjc-nav-cta:hover{
+    background:var(--secondary-light);
+    color:var(--primary-dark);
+}
+
 .jjc-nav-toggle{
     display:none;
     flex-direction:column;
@@ -1194,4 +1208,188 @@ footer p{
         white-space:nowrap;
     }
 
+}
+
+
+/* ==================================================================
+   FORMULÁRIO DE INSCRIÇÃO (inscricao.html)
+   ================================================================== */
+
+.jjc-form{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    margin-top:34px;
+}
+
+.jjc-form fieldset{
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:26px;
+    background:var(--surface);
+}
+
+.jjc-form legend{
+    padding:0 10px;
+    font-weight:700;
+    color:var(--secondary-light);
+    font-size:.95rem;
+    text-transform:uppercase;
+    letter-spacing:.4px;
+}
+
+.jjc-form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.jjc-form-field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.jjc-form-field label{
+    font-size:.85rem;
+    font-weight:600;
+    color:var(--text);
+}
+
+.jjc-form-field .jjc-hint{
+    font-size:.78rem;
+    color:var(--text-muted);
+    font-weight:400;
+}
+
+.jjc-form input,
+.jjc-form select,
+.jjc-form textarea{
+    background:var(--bg-alt);
+    border:1px solid var(--border);
+    border-radius:var(--radius-sm);
+    padding:12px 14px;
+    color:var(--text);
+    font-family:inherit;
+    font-size:.95rem;
+    transition:var(--transition);
+}
+
+.jjc-form input:focus,
+.jjc-form select:focus,
+.jjc-form textarea:focus{
+    outline:none;
+    border-color:var(--secondary);
+}
+
+.jjc-form input::placeholder,
+.jjc-form textarea::placeholder{
+    color:var(--text-muted);
+}
+
+.jjc-checkbox-field{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.jjc-checkbox-field input{
+    margin-top:4px;
+    width:auto;
+}
+
+.jjc-checkbox-field label{
+    font-size:.9rem;
+    color:var(--text-muted);
+    font-weight:400;
+}
+
+/* Lista de atletas adicionados dinamicamente */
+.jjc-atleta-card{
+    border:1px solid var(--border);
+    border-radius:var(--radius-sm);
+    padding:20px;
+    background:var(--bg-alt);
+    position:relative;
+    margin-bottom:16px;
+}
+
+.jjc-atleta-card h4{
+    margin:0 0 14px;
+    color:var(--secondary-light);
+    font-size:.9rem;
+}
+
+.jjc-atleta-remover{
+    position:absolute;
+    top:16px;
+    right:16px;
+    background:none;
+    border:none;
+    color:var(--text-muted);
+    cursor:pointer;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.jjc-atleta-remover:hover{
+    color:#e57373;
+}
+
+.jjc-btn-adicionar{
+    align-self:flex-start;
+    background:transparent;
+    border:1px dashed var(--secondary);
+    color:var(--secondary-light);
+    border-radius:50px;
+    padding:10px 22px;
+    font-weight:600;
+    font-size:.85rem;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.jjc-btn-adicionar:hover{
+    background:var(--surface-hover);
+}
+
+.jjc-form-submit{
+    border:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.jjc-form-msg{
+    padding:16px 20px;
+    border-radius:var(--radius-sm);
+    font-size:.9rem;
+    font-weight:500;
+    display:none;
+}
+
+.jjc-form-msg.show{
+    display:block;
+}
+
+.jjc-form-msg.success{
+    background:rgba(76,175,80,.12);
+    border:1px solid rgba(76,175,80,.4);
+    color:#8fdc93;
+}
+
+.jjc-form-msg.error{
+    background:rgba(229,115,115,.12);
+    border:1px solid rgba(229,115,115,.4);
+    color:#f19a9a;
+}
+
+.jjc-form-msg.loading{
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--border);
+    color:var(--text-muted);
+}
+
+.jjc-atleta-limite{
+    font-size:.82rem;
+    color:var(--text-muted);
 }

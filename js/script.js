@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNav();
   initContadores();
   renderModalidadesHome();
+  renderInfoGeralHome();
   renderPaginaModalidade();
   renderPaginaEquipe();
 });
@@ -168,8 +169,46 @@ function renderModalidadesHome() {
 
 
 /* ==================================================================
-   4. PÁGINA DE MODALIDADE (futsal.html, volei.html, corrida.html,
-      queimada.html)
+   3B. INFORMAÇÕES GERAIS NA HOME (identidade do evento + alojamento)
+   ------------------------------------------------------------------
+   Procura [data-identidade] e [data-alojamento] em index.html e
+   preenche a partir de JJC_INFO (definido em data.js). Se algum dos
+   dois blocos não existir na página, é simplesmente ignorado.
+   ================================================================== */
+function renderInfoGeralHome() {
+  if (typeof JJC_INFO === "undefined") return;
+
+  // --- Identidade do evento ---
+  const identidadeBox = document.querySelector("[data-identidade]");
+  if (identidadeBox && JJC_INFO.identidade) {
+    setText("[data-identidade-titulo]", JJC_INFO.identidade.titulo);
+    setText("[data-identidade-texto]", JJC_INFO.identidade.texto);
+  }
+
+  // --- Alojamento e café da manhã ---
+  const alojamentoBox = document.querySelector("[data-alojamento]");
+  if (alojamentoBox && JJC_INFO.alojamento) {
+    setText("[data-alojamento-titulo]", JJC_INFO.alojamento.titulo);
+    setText("[data-alojamento-texto]", JJC_INFO.alojamento.texto);
+
+    const lista = document.querySelector("[data-alojamento-itens]");
+    if (lista) {
+      lista.innerHTML = JJC_INFO.alojamento.itens.map(item => `
+        <div class="jjc-info-card">
+          <p class="cc-eyebrow">${item.label}</p>
+          <p>${item.valor}</p>
+        </div>
+      `).join("");
+    }
+
+    setText("[data-alojamento-obs]", JJC_INFO.alojamento.observacao);
+  }
+}
+
+
+/* ==================================================================
+   4. PÁGINA DE MODALIDADE (futsal.html, volei.html,
+      queimada.html, mesa.html)
    ------------------------------------------------------------------
    Cada página de modalidade possui um elemento raiz
    <body data-modalidade="futsal"> — a partir desse atributo o script
